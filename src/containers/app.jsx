@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
+import MainView from './mainview.jsx'
+
 export const mapStateToProps = (state) => {
   return {
   }
@@ -20,7 +22,7 @@ export const ConnectedApp = (props) => {
     <>
       <CssBaseline />
       <Router>
-        <div>Hello universes!</div>
+        <MainView />
       </Router>
     </>
   )

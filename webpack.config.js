@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: '[name]-bundle.dev.js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/'
+    publicPath: '/assets/'
   },
   devServer: {
     hot: true,
