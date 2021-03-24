@@ -1,5 +1,5 @@
-const webpack = require('webpack')
 const path = require('path')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -28,7 +28,12 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
+  },
+  optimization: {
+    minimizer: [new TerserPlugin({
+      extractComments: false
+    })]
+  }
 }
